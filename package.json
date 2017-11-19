@@ -7,16 +7,19 @@
     "npm": "3.10.9"
   },
   "scripts": {
-    "postinstall": "ng build --prod",
     "ng": "ng",
-    "start": "node server.js",
     "build": "ng build",
-    "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start": "node server.js",
+    "test": "ng test",
+    "pree2e": "webdriver-manager update",
+    "postinstall": "ng build --aot -prod",
+    "deploy": "git push origin master && git push heroku master"
   },
   "private": true,
   "dependencies": {
+    "typescript": "~2.4.2",
     "@angular/cli": "1.4.5",
     "@angular/animations": "^4.2.4",
     "@angular/common": "^4.2.4",
