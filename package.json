@@ -2,9 +2,14 @@
   "name": "heroku-anglar",
   "version": "0.0.0",
   "license": "MIT",
+  "engines": {
+    "node": "6.11.1",
+    "npm": "3.10.9"
+  },
   "scripts": {
+    "postinstall": "ng build --aot -prod",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
